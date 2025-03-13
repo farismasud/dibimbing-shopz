@@ -1,18 +1,12 @@
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ProductPage from "./pages/Product";
 
-function App() {
+export default function App() {
   return (
-    <div>
-      <Navbar />
-      <div className="flex items-center justify-center min-h-screen bg-gray-100">
-        <h1 className="text-4xl font-bold text-blue-600">
-          Hello, Tailwind CSS v4!
-        </h1>
-      </div>
-      <Footer />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<ProductPage />} />
+      </Routes>
+    </Router>
   );
 }
-
-export default App;
